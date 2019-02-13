@@ -1,0 +1,388 @@
+@font-face {
+    font-family: "Bebas";
+    src: url(..//fonts/BebasNeueRegular.otf),
+         url(..//fonts/BebasNeueRegular.ttf);
+}
+body {
+    font-family: Raleway;
+    background: #f5fcff;
+}
+header {
+    background: url(..//img/header-bg.png) no-repeat;
+    height: 220px;
+}
+p {
+    color: #002b41;
+    margin: 7px 0;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.15px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+.container {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+}
+.flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+header .container {
+    display: flex;
+    position: relative;
+    height: 220px;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-block {
+    width: 805px;
+    background: #fff;
+    padding-left: 200px;
+    border-radius: 50px;
+}
+.header-block img {
+    position: absolute;
+    top: 0;left: -25px;
+}
+.header-block h1 {
+    margin: 11px 0 16px 30px;
+    letter-spacing: -0.1px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #002b41;
+}
+.header-block span {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #969696;
+    padding-right: 28px;
+    padding-left: 13px;
+}
+.header-block span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -4px;
+    top: -2px;    
+    width: 1px;
+    height: 100%;
+    background: #969696;
+}
+.header-block span:last-child::after {
+    display: none;
+}
+.advantage-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 14px;
+}
+.advantages span:nth-child(1) i {
+    background-image: url(..//img/header-icon-1.png);
+}
+.advantages span:nth-child(2) i {
+    background-image: url(..//img/header-icon-2.png);
+}
+.advantages span:nth-child(3) i{
+    background-image: url(..//img/header-icon-3.png);
+}
+
+section.tabs {
+    background: #fff;
+    border-bottom: 2px solid #f1f1f3;
+    font-size: 0;
+}
+section.tabs a {
+    display: inline-block;
+    font-family: "Bebas", sans-serif;
+    color: #002b41;
+    font-size: 36px;
+    letter-spacing: 1.6px;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: -2px;
+    padding: 36px 80px 26px 81px;
+    transition: .3s;
+}
+section.tabs a:hover {
+    background: #fbfbfb;
+}
+.active-page {
+    background: #f1f1f3;
+    border-bottom: 2px solid #5fc0e7;
+}
+
+
+
+section.content {
+    padding-top: 50px;
+}
+.left-part,
+.right-part {
+    width: 50%;
+    flex-direction: column;
+}
+
+.work-block h3,
+.story-block h3,
+.education-block h3,
+.people-block h3 {
+    color: #002b41;
+    font-size: 30px;
+    font-family: "Bebas", sans-serif;
+    letter-spacing: 1.2px;
+}
+.people-block,
+.story-block,
+.education-block,
+.work-block{
+    position: relative;
+    width: 98%;
+    background: #fff;
+    border-radius: 15px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=31, Direction=0, Color=#ADADAD)";
+    -moz-box-shadow: 0 8px 31px -1px #d4d4d4;
+    -webkit-box-shadow: 0 8px 31px -1px #d4d4d4;
+    box-shadow: 0 8px 31px -1px #d4d4d4;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=31, Direction=135, Color=#d4d4d4);
+    padding: 33px 25px 28px 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.story-block::before,
+.education-block::before,
+.work-block::before,
+.people-block::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    top: 0;left: 0;
+    background: #5fc0e7;
+}
+.work-block::before {
+    background: #7c4098;
+}
+.story-block::before {
+    background: #fa5770;
+}
+.education-block::before {
+    background: #f26632;
+}
+.story-block,
+.education-block{
+    margin-left: auto;
+}
+p.headings {
+    margin: 0;
+    margin-top: 31px;
+    letter-spacing: -0.1px;
+    font-weight: 600;
+}
+.headings span a {
+    color: #5fc0e7;
+}
+.headings span {
+    float: right;
+    font-size: 14px;
+    color: #5fc0e7;
+    font-weight: 400;
+    margin-top: 4px;
+    margin-right: -3px;
+}
+.images-case {
+    margin-top: 18px;
+    justify-content: space-between;
+}
+.edit {
+    margin-top: 26px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 0;
+    color: #5fc0e7;
+    cursor: pointer;
+}
+.edit i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(..//img/pen-icon.png) no-repeat;
+    margin-right: 4px;
+}
+
+
+section.gallery {
+    padding-top: 25px;
+    padding-bottom: 50px;
+}
+
+.filter {
+    background: #fff;
+    padding: 16px 25px;
+    border-radius: 30px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=31, Direction=0, Color=#ADADAD)";
+    -moz-box-shadow: 0 8px 31px -1px #d4d4d4;
+    -webkit-box-shadow: 0 8px 31px -1px #d4d4d4;
+    box-shadow: 0 8px 31px -1px #d4d4d4;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=31, Direction=135, Color=#d4d4d4);
+}
+
+.filter span {
+    color: #002b41;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 24px;
+}
+.filter button {
+    text-transform: uppercase;
+    border-radius: 15px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #002b41;
+    font-weight: 500;
+    margin-right: 63px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.filter button:nth-child(2) {
+    margin-right: 43px;
+}
+.filter button.button-active {
+    background: #5fc0e7;
+    color: #fff;
+    padding: 5px 20px;
+}
+
+.gallery-wrapper {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 3px;
+    background: #fff;
+    flex-wrap: wrap;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=11, Direction=0, Color=#ADADAD)";/*IE 8*/
+    -moz-box-shadow: 0 0 11px 3px #dedede;/*FF 3.5+*/
+    -webkit-box-shadow: 0 0 11px 3px #dedede;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 0 11px 3px #dedede;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=11, Direction=135, Color=#dedede); /*IE 5.5-7*/
+}
+.gallery-wrapper a {
+    display: block;
+    position: relative;
+    width: 272px;
+    height: 170px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.gallery-wrapper a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;bottom: 0;right: 0;left: 0;
+    background: #002b41;
+    opacity: 0;
+    transition: .3s;
+    pointer-events: none;
+}
+.gallery-wrapper a:hover::before {
+    opacity: .8;
+}
+.gallery-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-wrapper span.magnifier {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url(..//img/magnifier-icon.png);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+.gallery-wrapper a:hover .magnifier {
+    opacity: 1;
+}
+
+
+.popup {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;bottom: 0;right: 0;left: 0;
+    background: #002b41cf;
+}
+span.closebtn {
+    position: absolute;
+    width: 55px;
+    top: -30px;
+    right: -30px;
+    z-index: 111;
+    height: 55px;
+    background-color: #5fc0e7;
+    border-radius: 50%;
+    cursor: pointer;
+}
+span.closebtn::after,
+span.closebtn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 28px;
+    top: 14px;
+    background: #fff;
+    left: 26px;
+    transform: rotate(45deg);
+}
+span.closebtn::before {
+    transform: rotate(135deg);
+}
+.popup-img {
+    width:1200px; 
+    height: 525px; 
+    position: relative;
+    background: #fff;
+    display: flex;
+}
+#expandedImg {
+    width: 50%; 
+    height: 100%; 
+    object-fit: cover;
+}
+.popup-text {
+    padding: 40px;
+}
+.popup-text p,
+.popup-text a {
+    margin: 20px 0;
+}
