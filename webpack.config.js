@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({})],
+    // minimizer: [new OptimizeCSSAssetsPlugin({})],
   },
   module: {
     rules: [
@@ -77,26 +77,26 @@ module.exports = {
     ],
   },
   plugins: [
-    new StylelintPlugin(),
-    new MinifyPlugin({}, { sourceMap: true }),
+    // new StylelintPlugin(),
+    // new MinifyPlugin({}, { sourceMap: true }),
     new MiniCssExtractPlugin({
       filename: 'main.css',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: './*.html',
-        to: './'
-      }
-    ])
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: './*.html',
+    //     to: './'
+    //   }
+    // ])
   ],
   stats: { colors: true },
 
   // Generate external sourcemaps for the JS & CSS bundles
   devtool: 'source-map',
 
-  devServer: {
-    port: process.env.PORT || 8080,
-    contentBase: path.join(__dirname, './dist'),
-    historyApiFallback: true
-  },
+  // devServer: {
+  //   port: process.env.PORT || 8080,
+  //   contentBase: path.join(__dirname, './dist'),
+  //   historyApiFallback: true
+  // },
 };
