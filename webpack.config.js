@@ -14,7 +14,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
   },
   optimization: {
-    // minimizer: [new OptimizeCSSAssetsPlugin({})],
+    minimizer: [new OptimizeCSSAssetsPlugin({})],
   },
   module: {
     rules: [
@@ -78,13 +78,13 @@ module.exports = {
   },
   plugins: [
     // new StylelintPlugin(),
-    // new MinifyPlugin({}, { sourceMap: true }),
+    new MinifyPlugin({}, { sourceMap: true }),
     new MiniCssExtractPlugin({
       filename: 'main.css',
     }),
     // new CopyWebpackPlugin([
     //   {
-    //     from: './*.html',
+    //     from: './src',
     //     to: './'
     //   }
     // ])
